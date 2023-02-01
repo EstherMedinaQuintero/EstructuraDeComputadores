@@ -1,0 +1,10 @@
+Tener en cuenta los ciclos de trabajo 
+Combinacional = 
+Secuencial <= (initial, always)
+Retardo intra-asignación (a <= #3 b;)
+Mealy: salidas dependen de las entradas y los estados 
+Moore: salidas dependen solo de los estados
+Con k biestables tenemos 2^k estados posibles
+Lo que hace el start es reiniciar el circuito entero (lo lleva a lestado inicial)
+Parameter es para dar nombres simbólicos 
+En la sentencia case es importante poner un caso por defecto
