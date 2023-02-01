@@ -1,0 +1,44 @@
+$date
+	Mon Oct 31 00:32:08 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module mux2_4_tb $end
+$var wire 4 ! test_Out [3:0] $end
+$var reg 4 " test_A [3:0] $end
+$var reg 4 # test_B [3:0] $end
+$var reg 1 $ test_s $end
+$scope module mux2_4 $end
+$var wire 4 % A [3:0] $end
+$var wire 4 & B [3:0] $end
+$var wire 1 $ s $end
+$var wire 4 ' Out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b1111 &
+b0 %
+0$
+b1111 #
+b0 "
+b0 !
+$end
+#2000
+b1100 #
+b1100 &
+#4000
+b1010 !
+b1010 '
+1$
+b1010 #
+b1010 &
+b10 "
+b10 %
+#6000

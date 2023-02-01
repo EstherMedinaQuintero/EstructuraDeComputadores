@@ -1,0 +1,277 @@
+$date
+	Mon Oct 31 01:09:55 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module ul4_tb $end
+$var wire 4 ! test_Out [3:0] $end
+$var reg 4 " test_A [3:0] $end
+$var reg 4 # test_B [3:0] $end
+$var reg 2 $ test_S [1:0] $end
+$scope module ul4 $end
+$var wire 4 % A [3:0] $end
+$var wire 4 & B [3:0] $end
+$var wire 2 ' S [1:0] $end
+$var wire 4 ( Out [3:0] $end
+$scope module cl0 $end
+$var wire 2 ) S [1:0] $end
+$var wire 1 * a $end
+$var wire 1 + and_out $end
+$var wire 1 , b $end
+$var wire 1 - not_out $end
+$var wire 1 . or_out $end
+$var wire 1 / xor_out $end
+$var wire 1 0 out $end
+$scope module mux $end
+$var wire 2 1 S [1:0] $end
+$var wire 1 + a $end
+$var wire 1 . b $end
+$var wire 1 / c $end
+$var wire 1 - d $end
+$var reg 1 0 out $end
+$upscope $end
+$upscope $end
+$scope module cl1 $end
+$var wire 2 2 S [1:0] $end
+$var wire 1 3 a $end
+$var wire 1 4 and_out $end
+$var wire 1 5 b $end
+$var wire 1 6 not_out $end
+$var wire 1 7 or_out $end
+$var wire 1 8 xor_out $end
+$var wire 1 9 out $end
+$scope module mux $end
+$var wire 2 : S [1:0] $end
+$var wire 1 4 a $end
+$var wire 1 7 b $end
+$var wire 1 8 c $end
+$var wire 1 6 d $end
+$var reg 1 9 out $end
+$upscope $end
+$upscope $end
+$scope module cl2 $end
+$var wire 2 ; S [1:0] $end
+$var wire 1 < a $end
+$var wire 1 = and_out $end
+$var wire 1 > b $end
+$var wire 1 ? not_out $end
+$var wire 1 @ or_out $end
+$var wire 1 A xor_out $end
+$var wire 1 B out $end
+$scope module mux $end
+$var wire 2 C S [1:0] $end
+$var wire 1 = a $end
+$var wire 1 @ b $end
+$var wire 1 A c $end
+$var wire 1 ? d $end
+$var reg 1 B out $end
+$upscope $end
+$upscope $end
+$scope module cl3 $end
+$var wire 2 D S [1:0] $end
+$var wire 1 E a $end
+$var wire 1 F and_out $end
+$var wire 1 G b $end
+$var wire 1 H not_out $end
+$var wire 1 I or_out $end
+$var wire 1 J xor_out $end
+$var wire 1 K out $end
+$scope module mux $end
+$var wire 2 L S [1:0] $end
+$var wire 1 F a $end
+$var wire 1 I b $end
+$var wire 1 J c $end
+$var wire 1 H d $end
+$var reg 1 K out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 L
+0K
+1J
+1I
+1H
+1G
+0F
+0E
+b0 D
+b0 C
+0B
+0A
+0@
+1?
+0>
+0=
+0<
+b0 ;
+b0 :
+19
+08
+17
+06
+15
+14
+13
+b0 2
+b0 1
+00
+0/
+0.
+1-
+0,
+0+
+0*
+b0 )
+b10 (
+b0 '
+b1010 &
+b10 %
+b0 $
+b1010 #
+b10 "
+b10 !
+$end
+#2000
+b0 !
+b0 (
+09
+0I
+0J
+04
+07
+16
+05
+0G
+03
+b0 #
+b0 &
+b0 "
+b0 %
+#4000
+1K
+b1010 !
+b1010 (
+19
+1I
+1J
+14
+17
+06
+15
+1G
+13
+b1010 #
+b1010 &
+b10 "
+b10 %
+b1 $
+b1 '
+b1 )
+b1 1
+b1 2
+b1 :
+b1 ;
+b1 C
+b1 D
+b1 L
+#6000
+0K
+b0 !
+b0 (
+09
+0I
+0J
+04
+07
+16
+05
+0G
+03
+b0 #
+b0 &
+b0 "
+b0 %
+#8000
+b1000 !
+b1000 (
+1K
+1I
+1J
+14
+17
+06
+15
+1G
+13
+b1010 #
+b1010 &
+b10 "
+b10 %
+b10 $
+b10 '
+b10 )
+b10 1
+b10 2
+b10 :
+b10 ;
+b10 C
+b10 D
+b10 L
+#10000
+b0 !
+b0 (
+0K
+0I
+0J
+04
+07
+16
+05
+0G
+03
+b0 #
+b0 &
+b0 "
+b0 %
+#12000
+17
+18
+06
+13
+10
+09
+1B
+b1101 !
+b1101 (
+1K
+b10 "
+b10 %
+b11 $
+b11 '
+b11 )
+b11 1
+b11 2
+b11 :
+b11 ;
+b11 C
+b11 D
+b11 L
+#14000
+b1111 !
+b1111 (
+19
+07
+08
+16
+03
+b0 "
+b0 %
+#16000

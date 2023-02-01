@@ -1,0 +1,1 @@
+/// Celda lógica

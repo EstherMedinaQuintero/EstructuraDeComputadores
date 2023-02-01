@@ -1,0 +1,46 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x5591333a0410 .scope module, "mux2_4_tb" "mux2_4_tb" 2 11;
+ .timescale -9 -11;
+v0x5591333c0aa0_0 .var "test_A", 3 0;
+v0x5591333c0b80_0 .var "test_B", 3 0;
+v0x5591333c0c50_0 .net "test_Out", 3 0, L_0x5591333c0e20;  1 drivers
+v0x5591333c0d50_0 .var "test_s", 0 0;
+S_0x5591333a0590 .scope module, "mux2_4" "mux2_4" 2 22, 3 2 0, S_0x5591333a0410;
+ .timescale -9 -11;
+    .port_info 0 /OUTPUT 4 "Out"
+    .port_info 1 /INPUT 4 "A"
+    .port_info 2 /INPUT 4 "B"
+    .port_info 3 /INPUT 1 "s"
+v0x5591333a07d0_0 .net "A", 3 0, v0x5591333c0aa0_0;  1 drivers
+v0x5591333c0790_0 .net "B", 3 0, v0x5591333c0b80_0;  1 drivers
+v0x5591333c0870_0 .net "Out", 3 0, L_0x5591333c0e20;  alias, 1 drivers
+v0x5591333c0930_0 .net "s", 0 0, v0x5591333c0d50_0;  1 drivers
+L_0x5591333c0e20 .functor MUXZ 4, v0x5591333c0aa0_0, v0x5591333c0b80_0, v0x5591333c0d50_0, C4<>;
+    .scope S_0x5591333a0410;
+T_0 ;
+    %vpi_call 2 32 "$monitor", "tiempo=%0d a=%b b=%b S=%b resultado=%b", $time, v0x5591333c0aa0_0, v0x5591333c0b80_0, v0x5591333c0d50_0, v0x5591333c0c50_0 {0 0 0};
+    %vpi_call 2 37 "$dumpfile", "mux2_4_tb.vcd" {0 0 0};
+    %vpi_call 2 38 "$dumpvars" {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x5591333c0aa0_0, 0, 4;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x5591333c0b80_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5591333c0d50_0, 0, 1;
+    %delay 2000, 0;
+    %vpi_call 2 48 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux2_4_tb.v";
+    "mux2_4.v";

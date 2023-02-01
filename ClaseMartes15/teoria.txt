@@ -1,0 +1,15 @@
+Contenidos
+
+Modelado de circuitos lógicos secuenciales
+    - Normalmente tiene una parte combinacional y un estado
+    - Suelen ser síncronos (con un reloj)
+    - Responde a flancos (de subida o de bajada)
+            - Tiempo de ciclo
+            - Ciclo de trabajo
+                    - En señales cuadradas es 50%
+La señal de reloj
+Sistemas síncronos activados por flanco
+Ejemplo: Biestables
+Asignaciones no bloqueantes
+Herramientas útiles de verilog
+Máquinas de estados finitos

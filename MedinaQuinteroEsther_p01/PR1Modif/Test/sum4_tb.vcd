@@ -1,0 +1,66 @@
+$date
+	Sun Oct 30 22:53:22 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module fa $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # c_in $end
+$var wire 1 $ sum $end
+$var wire 1 % c_out $end
+$upscope $end
+$scope module sum4_tb $end
+$var wire 1 & test_out $end
+$var wire 4 ' test_S [3:0] $end
+$var reg 4 ( test_A [3:0] $end
+$var reg 4 ) test_B [3:0] $end
+$var reg 1 * test_in $end
+$scope module sum4 $end
+$var wire 4 + A [3:0] $end
+$var wire 4 , B [3:0] $end
+$var wire 1 * c_in $end
+$var wire 1 & c_out $end
+$var wire 4 - S [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 -
+b0 ,
+b0 +
+0*
+b0 )
+b0 (
+b0 '
+0&
+x%
+x$
+z#
+z"
+z!
+$end
+#2000
+b1 '
+b1 -
+b1 )
+b1 ,
+#4000
+b10 '
+b10 -
+b1 (
+b1 +
+#6000
+b1 '
+b1 -
+b0 )
+b0 ,
+b0 (
+b0 +
+1*
+#8000

@@ -1,0 +1,33 @@
+$date
+	Sun Oct 30 23:13:47 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module compl1_tb $end
+$var wire 4 ! test_Out [3:0] $end
+$var reg 4 " test_Inp [3:0] $end
+$var reg 1 # test_cpl $end
+$scope module compl1 $end
+$var wire 4 $ Inp [3:0] $end
+$var wire 1 # cpl $end
+$var wire 4 % Out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#2000
+b1111 !
+b1111 %
+1#
+#4000
