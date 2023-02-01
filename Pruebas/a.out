@@ -1,0 +1,65 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x555ac86cc0f0 .scope module, "adder_tb" "adder_tb" 2 11;
+ .timescale -9 -11;
+v0x555ac8715120_0 .var "test_a", 0 0;
+v0x555ac8715230_0 .var "test_b", 0 0;
+v0x555ac87152f0_0 .var "test_cin", 0 0;
+v0x555ac8715390_0 .net "test_cout", 0 0, L_0x555ac87157b0;  1 drivers
+v0x555ac8715460_0 .net "test_sum2", 0 0, L_0x555ac87155b0;  1 drivers
+S_0x555ac86cc270 .scope module, "adder" "adder" 2 21, 3 1 0, S_0x555ac86cc0f0;
+ .timescale -9 -11;
+    .port_info 0 /OUTPUT 1 "sum2"
+    .port_info 1 /OUTPUT 1 "cout"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /INPUT 1 "a"
+    .port_info 4 /INPUT 1 "b"
+L_0x555ac86def00 .functor XOR 1, v0x555ac8715120_0, v0x555ac8715120_0, C4<0>, C4<0>;
+L_0x555ac86def70 .functor AND 1, v0x555ac8715120_0, v0x555ac8715120_0, C4<1>, C4<1>;
+L_0x555ac87155b0 .functor XOR 1, v0x555ac87152f0_0, L_0x555ac86def00, C4<0>, C4<0>;
+L_0x555ac87156c0 .functor AND 1, v0x555ac87152f0_0, L_0x555ac86def00, C4<1>, C4<1>;
+RS_0x7f7e25a68078 .resolv tri, L_0x555ac86def70, L_0x555ac87156c0;
+o0x7f7e25a68048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x555ac87157b0 .functor OR 1, RS_0x7f7e25a68078, o0x7f7e25a68048, C4<0>, C4<0>;
+v0x555ac8702fb0_0 .net "a", 0 0, v0x555ac8715120_0;  1 drivers
+v0x555ac8714af0_0 .net "b", 0 0, v0x555ac8715120_0;  alias, 1 drivers
+v0x555ac8714be0_0 .net "carry1", 0 0, o0x7f7e25a68048;  0 drivers
+v0x555ac8714cb0_0 .net8 "carry2", 0 0, RS_0x7f7e25a68078;  2 drivers
+v0x555ac8714d50_0 .net "cin", 0 0, v0x555ac87152f0_0;  1 drivers
+v0x555ac8714e40_0 .net "cout", 0 0, L_0x555ac87157b0;  alias, 1 drivers
+v0x555ac8714f00_0 .net "sum1", 0 0, L_0x555ac86def00;  1 drivers
+v0x555ac8714fc0_0 .net "sum2", 0 0, L_0x555ac87155b0;  alias, 1 drivers
+    .scope S_0x555ac86cc0f0;
+T_0 ;
+    %vpi_call 2 31 "$monitor", "tiempo=%0d a=%b b=%b cin=%b resultado=%b cout=%b", $time, v0x555ac8715120_0, v0x555ac8715230_0, v0x555ac87152f0_0, v0x555ac8715460_0, v0x555ac8715390_0 {0 0 0};
+    %vpi_call 2 36 "$dumpfile", "adder_tb.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x555ac8715120_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x555ac8715230_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x555ac87152f0_0, 0, 1;
+    %delay 2000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x555ac8715120_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x555ac8715230_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x555ac87152f0_0, 0, 1;
+    %delay 2000, 0;
+    %vpi_call 2 53 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "adder_tb.v";
+    "adder.v";

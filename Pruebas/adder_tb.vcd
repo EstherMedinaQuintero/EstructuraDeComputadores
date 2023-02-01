@@ -1,0 +1,42 @@
+$date
+	Sat Oct  8 13:09:21 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module adder_tb $end
+$var wire 1 ! test_sum2 $end
+$var wire 1 " test_cout $end
+$var reg 1 # test_a $end
+$var reg 1 $ test_b $end
+$var reg 1 % test_cin $end
+$scope module adder $end
+$var wire 1 # a $end
+$var wire 1 # b $end
+$var wire 1 & carry1 $end
+$var wire 1 ' carry2 $end
+$var wire 1 % cin $end
+$var wire 1 " cout $end
+$var wire 1 ( sum1 $end
+$var wire 1 ! sum2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0'
+z&
+0%
+1$
+0#
+x"
+0!
+$end
+#2000
+1!
+1%
+#4000
